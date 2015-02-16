@@ -49,14 +49,16 @@ public class Trie {
     }
 
     Trie_Node delete(char[] data,int length,Trie_Node root){
-       if(length==0)
-           return  ;
+       if(length==data.length)
+           return null;
         int charIntValue = convertToInt(data[length]);
-        if (root.alpha[charIntValue] == null)
-            return false; 
-        delete(data,length-1,);
+        root=  root.alpha[charIntValue];
+        delete(data,length+1,root);
+
+        System.out.println((char)(charIntValue+(int)'a'));
 
 
+       return  root;
     }
 
 
